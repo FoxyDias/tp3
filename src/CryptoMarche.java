@@ -29,7 +29,7 @@ public class CryptoMarche {
         double val = 0;
         for (Portefeuille portefeuille : this.portefeuilles) {
             if(portefeuille.estProprietaire(proprietaire))
-                val += portefeuille.valeurEnEuros;
+                val += portefeuille.valeurEnEuros();
         }
 
         return val;
@@ -47,7 +47,7 @@ public class CryptoMarche {
         double val = 0;
         for (Portefeuille portefeuille : this.portefeuilles) {
             if(monnaie == portefeuille.getMonnaie())
-                val += portefeuille.valeurEnEuros;
+                val += portefeuille.valeurEnEuros();
         }
 
         return val;
