@@ -38,9 +38,10 @@ public class Portefeuille {
    * @return true si le montant en euros est supérieur ou égal à 0 
    */
   public boolean achatDevise (double montantEuros){
-	/**
-           FONCTION À IMPLEMENTER
-	**/
+	if(montantEuros/monnaie.getValeurDeJeton() >= 0) {
+        montant += montantEuros/monnaie.getValeurDeJeton();
+        return true;
+    }
     return false;
   }
 
