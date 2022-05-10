@@ -22,7 +22,7 @@ public class Portefeuille {
       if (!this.monnaie.getNom().equals(destination.monnaie.getNom())) {
           return false;
       }
-      if (this.montant < destination.montant) {
+      if (this.montant < montantJetons) {
           return false;
       }
       destination.montant += montantJetons;
@@ -52,7 +52,7 @@ public class Portefeuille {
    * @return true si les nom du propriétaire est correct
    */
   public boolean estProprietaire (String proprietaire){
-        return (proprietaire.equals(this.proprietaire))?true:false;
+        return proprietaire.equals(this.proprietaire);
   }
 
   /**
